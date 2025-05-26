@@ -1,0 +1,626 @@
+/* Clinic Registration Form Styles */
+:root {
+  --primary-orange: #ff8c00;
+  --secondary-orange: #ff6b00;
+  --light-orange: #ffe4cc;
+  --dark-orange: #cc7000;
+  --text-dark: #343a40;
+  --text-muted: #6c757d;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+}
+
+.vet-clinic-header {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  border-bottom: 3px solid var(--dark-orange);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+.clinic-profile-info-section,
+.clinic-contact-info-section,
+.clinic-address-info-section,
+.clinic-required-docs-section {
+  background-color: var(--white);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-orange) !important;
+}
+
+.clinic-profile-info-section:hover,
+.clinic-contact-info-section:hover,
+.clinic-address-info-section:hover,
+.clinic-required-docs-section:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+}
+
+.image-box {
+  height: 150px;
+  width: 150px;
+  border: 2px solid var(--primary-orange);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-light);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.image-box.loading {
+  border-color: #adb5bd;
+  background-color: #f8f9fa;
+}
+
+.image-box img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.image-box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.05);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-box:hover::after {
+  opacity: 1;
+}
+
+.btn-warning {
+  background-color: var(--primary-orange);
+  border-color: var(--primary-orange);
+  color: var(--white);
+}
+
+.btn-warning:hover, .btn-warning:focus {
+  background-color: var(--secondary-orange);
+  border-color: var(--secondary-orange);
+  color: var(--white);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary-orange);
+  border-color: var(--primary-orange);
+}
+
+.dropdown-item:active {
+  background-color: var(--primary-orange);
+}
+
+.section-icon {
+  background-color: var(--primary-orange);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.document-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.document-card.border-success {
+  border-color: #28a745 !important;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);
+}
+
+.document-card:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.document-card .card-header {
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--light-orange);
+  color: var(--text-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.document-card .card-header.bg-success-subtle {
+  background-color: rgba(40, 167, 69, 0.1) !important;
+  color: #28a745;
+  border-bottom-color: rgba(40, 167, 69, 0.2);
+}
+
+.document-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.document-card .image-box {
+  flex: 0 0 auto;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 1.25rem;
+  background-color: #f8f9fa;
+  border: 2px solid var(--primary-orange);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.document-card.border-success .image-box {
+  border-color: #28a745;
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.1);
+}
+
+.document-card .image-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.empty-field-alert {
+  background-color: rgba(220, 53, 69, 0.05);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.1);
+  border-radius: 6px;
+  padding: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Modified file info styling */
+.doc-file-info {
+  width: 100%;
+  margin-top: 0.875rem;
+  padding: 0.625rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.05);
+  font-size: 0.75rem;
+  color: #495057;
+  text-align: center;
+}
+
+.doc-file-info .text-truncate {
+  font-weight: 500;
+  margin-bottom: 0.125rem;
+}
+
+.document-card.border-success .doc-file-info {
+  background-color: rgba(40, 167, 69, 0.05);
+  border-color: rgba(40, 167, 69, 0.1);
+}
+
+/* Improve button container layout */
+.doc-button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.doc-button-container label.btn,
+.doc-button-container button.btn {
+  flex: 1;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.doc-button-container .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.doc-button-container .btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.doc-button-container .doc-remove-btn {
+  flex: 0 0 auto !important;
+  padding: 0.375rem 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.doc-remove-btn:hover {
+  opacity: 1;
+}
+
+/* Badge styling in card header */
+.document-card .card-header .badge {
+  padding: 0.35rem 0.5rem;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doc-status {
+  z-index: 5;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.vet-map-container {
+  border-color: var(--primary-orange) !important;
+}
+
+#submitBtn {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  border: none;
+  padding: 10px 25px;
+}
+
+#submitBtn:hover {
+  background: linear-gradient(135deg, var(--secondary-orange), var(--dark-orange));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.form-floating > label {
+  color: var(--text-muted);
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: var(--primary-orange);
+}
+
+/* Dropdown Styling */
+.dropdown-toggle.btn-outline-warning {
+  border-color: #ced4da;
+  color: var(--text-dark);
+  background-color: var(--white);
+  text-align: left;
+  height: 58px;
+  border-width: 1px;
+  position: relative;
+}
+
+.dropdown-toggle.btn-outline-warning:hover,
+.dropdown-toggle.btn-outline-warning:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+  color: var(--text-dark);
+  background-color: var(--white);
+}
+
+.dropdown-toggle.btn-outline-warning::after {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dropdown-menu {
+  border-radius: 0.375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 140, 0, 0.1);
+}
+
+.dropdown-item.active {
+  background-color: rgba(255, 140, 0, 0.15);
+  color: var(--primary-orange);
+  font-weight: 600;
+}
+
+.dropdown-item i {
+  color: var(--primary-orange);
+  width: 20px;
+  text-align: center;
+}
+
+.business-type-item:hover {
+  color: var(--primary-orange);
+}
+
+/* Address Autocomplete Dropdowns */
+.dropdown-menu.position-absolute {
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1050;
+  width: 100% !important;
+  margin-top: 2px;
+  transition: max-height 0.3s ease;
+  left: 0 !important;
+  right: 0 !important;
+  box-sizing: border-box;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu .dropdown-item {
+  white-space: normal;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.dropdown-menu .dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 140, 0, 0.1);
+  color: var(--primary-orange);
+}
+
+.form-control.is-valid {
+  border-color: #28a745;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.invalid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+/* Logo Upload Styling */
+#logoControlsContainer {
+  margin-top: 0.5rem;
+}
+
+#logoControlsContainer button {
+  transition: all 0.2s ease;
+}
+
+#logoControlsContainer button:hover {
+  transform: translateY(-2px);
+}
+
+#logoFileDetails {
+  background-color: rgba(0,0,0,0.03);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Custom Dropdown Validation Styling */
+.dropdown .dropdown-toggle.is-invalid {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.dropdown .dropdown-toggle.is-valid {
+  border-color: #28a745;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.dropdown .invalid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+/* Required Field Styling - Without Asterisks */
+.form-floating input:required + label,
+.form-control:required + label {
+  font-weight: 500;
+  color: var(--primary-orange);
+}
+
+/* Make sure floating labels are properly colored */
+.form-floating > .form-control:required ~ label,
+.form-floating > input:required ~ label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Show orange border but keep normal text color for labels */
+.required-field {
+  border-left: 3px solid var(--primary-orange) !important;
+}
+
+.required-field:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 0.25rem rgba(255, 140, 0, 0.25);
+}
+
+.required-field.is-valid {
+  border-left: 3px solid #28a745 !important;
+}
+
+/* Valid state styling */
+.form-control.is-valid {
+  border-color: #28a745;
+  border-left: 3px solid #28a745 !important;
+  background-color: rgba(40, 167, 69, 0.05);
+}
+
+/* Custom border highlight for required dropdowns */
+.dropdown .dropdown-toggle {
+  transition: all 0.3s ease;
+}
+
+#businessTypeDropdown, #facilityTypeDropdown {
+  border-left: 3px solid var(--primary-orange) !important;
+}
+
+/* Fix for facility type dropdown overflow */
+#facilityTypeDropdown, #businessTypeDropdown {
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: auto;
+  min-height: 58px;
+}
+
+/* Limit text content in dropdown button */
+#facilityTypeDropdown .dropdown-toggle-text,
+#businessTypeDropdown .dropdown-toggle-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 20px);
+}
+
+/* Dropdown selected state to show validation success - without checkmarks */
+.dropdown-toggle.is-valid,
+.dropdown-toggle.selected {
+  border-color: #28a745 !important;
+  border-left: 3px solid #28a745 !important;
+  background-color: rgba(40, 167, 69, 0.05);
+  background-image: none !important;
+}
+
+/* Hide Bootstrap's default checkmarks */
+.dropdown-item.active::after,
+.dropdown-item:active::after,
+.dropdown-menu-item.active::after,
+.dropdown-menu-item:active::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Override Bootstrap's checkmark styles */
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: rgba(255, 140, 0, 0.1) !important;
+  color: var(--primary-orange) !important;
+}
+
+/* Ensure color change works for business type dropdown */
+#businessTypeDropdown.selected,
+#facilityTypeDropdown.selected {
+  color: #212529 !important;
+  background-color: rgba(40, 167, 69, 0.05) !important;
+  border-color: #28a745 !important;
+  border-left: 3px solid #28a745 !important;
+}
+
+/* Fix facility type dropdown text appearance */
+#facilityTypeDropdown .dropdown-toggle-text,
+#businessTypeDropdown .dropdown-toggle-text {
+  display: inline-block;
+  max-width: calc(100% - 30px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+/* Alert styling for better empty notifications */
+.empty-field-alert {
+  border: 1px solid rgba(220, 53, 69, 0.25);
+  background-color: rgba(220, 53, 69, 0.05);
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  font-size: 0.875rem;
+  color: #dc3545;
+  animation: fadeIn 0.3s ease-in;
+}
+
+/* Focus styles for required fields to highlight them more prominently */
+input:required:focus,
+select:required:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 140, 0, 0.25);
+}
+
+/* Required button styling */
+.required-button {
+  border-left: 3px solid var(--primary-orange) !important;
+  transition: all 0.3s ease;
+}
+
+.required-button.is-invalid {
+  border-color: #dc3545 !important;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Logo image box required styling */
+.image-box.required {
+  border-left: 3px solid var(--primary-orange) !important;
+}
+
+/* Add asterisk styling */
+.text-danger {
+  color: #dc3545 !important;
+}

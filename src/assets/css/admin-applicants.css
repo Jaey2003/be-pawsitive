@@ -1,0 +1,357 @@
+/* Admin Applicants CSS - Orange Theme */
+
+/* ===== Variables ===== */
+:root {
+  --orange-primary: #FFA500;
+  --orange-light: #FFE0B2;
+  --orange-dark: #FF8C00;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --border-radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+/* ===== Page Layout ===== */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/* Header styling */
+h3.text-warning {
+  font-weight: 600;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h3.text-warning::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--orange-primary);
+}
+
+/* ===== Table Styling ===== */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.table th {
+  background-color: var(--orange-primary) !important;
+  color: var(--text-light);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 12px;
+  text-align: center;
+  border: none;
+}
+
+.table td {
+  padding: 12px;
+  vertical-align: middle;
+  border-color: #f0f0f0;
+}
+
+.table tbody tr:hover {
+  background-color: var(--orange-light);
+  transition: var(--transition);
+}
+
+/* Profile image in table */
+.table img.rounded-circle {
+  object-fit: cover;
+  border: 2px solid var(--orange-primary);
+  transition: var(--transition);
+}
+
+.table tr:hover img.rounded-circle {
+  transform: scale(1.05);
+}
+
+/* ===== Buttons ===== */
+.btn-warning {
+  background-color: var(--orange-primary);
+  border-color: var(--orange-primary);
+  color: var(--text-light);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.btn-warning:hover, .btn-warning:focus {
+  background-color: var(--orange-dark);
+  border-color: var(--orange-dark);
+  box-shadow: 0 0 0 0.2rem rgba(255, 165, 0, 0.25);
+}
+
+.dropdown-menu {
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1.5rem;
+  transition: var(--transition);
+}
+
+.dropdown-item:hover {
+  background-color: var(--orange-light);
+}
+
+.btn-sm {
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+}
+
+.btn-info.text-white {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* ===== Status Badges ===== */
+.badge {
+  padding: 0.5em 0.75em;
+  font-weight: 500;
+  border-radius: 30px;
+  font-size: 0.75rem;
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-warning.text-dark {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+/* ===== Modal Styling ===== */
+.modal-content {
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--orange-primary);
+  overflow: hidden;
+  height: 530px;
+}
+
+.modal-header {
+  background-color: var(--orange-primary) !important;
+  color: var(--text-light);
+  border-bottom: none;
+  padding: 1rem 1.5rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.modal-lg {
+  max-width: 800px;
+}
+
+/* ===== Modal Navigation ===== */
+/* Left nav pills styling */
+.nav-pills .nav-link {
+  color: var(--orange-primary);
+  border: 1px solid var(--orange-primary);
+  margin-bottom: 8px;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--orange-primary);
+  color: var(--text-light);
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: var(--orange-light);
+}
+
+/* Upper (inner) tabs styling */
+.nav-tabs.nav-fill .nav-link {
+  flex: 1;
+  text-align: center;
+  color: var(--orange-primary);
+  border: 1px solid var(--orange-primary);
+  border-radius: 5px 5px 0 0;
+  margin-right: 2px;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.nav-tabs.nav-fill .nav-link.active {
+  background-color: var(--orange-primary);
+  color: var(--text-light);
+  border-color: var(--orange-primary);
+}
+
+.nav-tabs.nav-fill .nav-link:hover:not(.active) {
+  background-color: var(--orange-light);
+}
+
+/* Inner tab content container */
+.inner-tab-container {
+  border: 1px solid var(--orange-primary);
+  border-radius: 0 0 5px 5px;
+  padding: 15px;
+  height: 100%;
+}
+
+/* Tab content scrollable container */
+.tab-scroll-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 350px;
+  padding-right: 5px;
+}
+
+.tab-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tab-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.tab-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--orange-primary);
+  border-radius: 10px;
+}
+
+.tab-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-dark);
+}
+
+/* Label container for consistent height */
+.label-container {
+  height: 50px;
+}
+
+/* Map container */
+.map-container {
+  height: 200px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Profile sections in modals */
+.modal .rounded-circle {
+  object-fit: cover;
+  border: 3px solid var(--orange-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: var(--transition);
+}
+
+.modal .rounded-circle:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Form Elements ===== */
+.form-control {
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--orange-primary);
+  box-shadow: 0 0 0 0.2rem rgba(255, 165, 0, 0.25);
+}
+
+.form-control[readonly] {
+  background-color: #f8f9fa;
+  opacity: 1;
+}
+
+/* ===== Documents Container ===== */
+#applicantDocsContainer .border,
+#petitionerDocsContainer .border,
+#clinicDocsContainer .border {
+  transition: var(--transition);
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+#applicantDocsContainer .border:hover,
+#petitionerDocsContainer .border:hover,
+#clinicDocsContainer .border:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  background-color: #fff;
+}
+
+#applicantDocsContainer img,
+#petitionerDocsContainer img,
+#clinicDocsContainer img {
+  max-height: 120px;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: var(--transition);
+}
+
+/* ===== Maps ===== */
+#applicant_map,
+#petitioner_map,
+#vet_map {
+  border-radius: var(--border-radius);
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  .nav-tabs.nav-fill .nav-link {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .inner-tab-container {
+    padding: 10px;
+  }
+  
+  .tab-scroll-container {
+    height: 280px;
+  }
+  
+  .modal-content {
+    height: auto;
+    max-height: 90vh;
+  }
+}

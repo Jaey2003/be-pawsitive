@@ -1,0 +1,37 @@
+/* Styled Dropdown Menu */
+.dropdown-menu {
+    width: 100%; /* Ensures dropdown matches the input field width */
+    max-height: 250px; /* Slightly increased for better scrolling */
+    overflow-y: auto; /* Enables smooth vertical scrolling */
+    overflow-x: hidden;
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%; /* Positions right below input field */
+    left: 0;
+    z-index: 1050; /* Ensures dropdown appears above other elements */
+    background-color: #fff; /* Clean white background */
+    border: 2px solid #ff7700; /* Matches the warm theme color */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    padding: 10px 15px; /* Enhanced padding for better touchability */
+    font-size: 16px; /* Slightly larger text for readability */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover Effect */
+.dropdown-item:hover {
+    background-color: #ffebcc; /* Light orange hover effect to match theme */
+    color: #ff7700; /* Orange text for contrast */
+    font-weight: bold; /* Slight emphasis for better UX */
+}
+
+/* Active Selection */
+.dropdown-item:active {
+    background-color: #ffcc80; /* Slightly darker orange for active selection */
+    color: #fff; /* White text for high contrast */
+}

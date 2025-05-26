@@ -1,0 +1,186 @@
+/* Orange Theme for Switch Account Modal */
+
+:root {
+  --orange-primary: #FF7722;
+  --orange-light: #FFEBDD;
+  --orange-dark: #E65C00;
+  --orange-hover: #FF8C3E;
+  --orange-ultra-light: #FFF5EE;
+  --text-dark: #333333;
+  --text-light: #777777;
+  --bg-light: #FFFAF7;
+  --border-light: #FFE0CC;
+}
+
+/* Modal Styling */
+#switchAccountModal .modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(255, 119, 34, 0.15);
+  border: none;
+}
+
+#switchAccountModal .modal-header {
+  background-color: var(--orange-primary);
+  color: white;
+  border-bottom: none;
+  padding: 1.25rem 1.5rem;
+}
+
+#switchAccountModal .modal-title {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+#switchAccountModal .modal-body {
+  background-color: var(--bg-light);
+  padding: 1.5rem;
+}
+
+#switchAccountModal .btn-close {
+  color: white;
+  text-shadow: none;
+  opacity: 0.8;
+  filter: brightness(0) invert(1);
+}
+
+#switchAccountModal .btn-close:hover {
+  opacity: 1;
+}
+
+/* Current Account Section */
+#switchAccountModal .bg-light {
+  background-color: white !important;
+}
+
+#switchAccountModal .border-primary {
+  border-color: var(--orange-primary) !important;
+}
+
+#switchAccountModal .badge.bg-primary {
+  background-color: var(--orange-primary) !important;
+  color: white;
+}
+
+/* Profile Pictures */
+#switchAccountModal .account_pic {
+  border: 2px solid white !important;
+  box-shadow: 0 2px 8px rgba(255, 119, 34, 0.2) !important;
+}
+
+/* Section Headers */
+#switchAccountModal h6.text-secondary {
+  color: var(--orange-dark) !important;
+  letter-spacing: 0.5px;
+}
+
+#switchAccountModal .text-secondary.small {
+  color: var(--orange-dark) !important;
+  font-weight: 600;
+}
+
+/* Divider */
+#switchAccountModal .border-bottom {
+  border-color: var(--border-light) !important;
+}
+
+/* Account List */
+#switchAccountModal .list-group-item {
+  border: 1px solid var(--border-light);
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+#switchAccountModal .list-group-item:hover {
+  background-color: var(--orange-ultra-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 119, 34, 0.1);
+}
+
+/* Status Badges */
+#switchAccountModal .badge.bg-warning {
+  background-color: #FFB74D !important;
+  color: var(--text-dark) !important;
+}
+
+#switchAccountModal .badge.bg-danger {
+  background-color: #FF5252 !important;
+}
+
+#switchAccountModal .badge.bg-success {
+  background-color: #4CAF50 !important;
+}
+
+/* Buttons */
+#switchAccountModal .btn-primary {
+  background-color: var(--orange-primary);
+  border-color: var(--orange-primary);
+  box-shadow: 0 2px 4px rgba(255, 119, 34, 0.2);
+}
+
+#switchAccountModal .btn-primary:hover {
+  background-color: var(--orange-hover);
+  border-color: var(--orange-hover);
+  box-shadow: 0 4px 8px rgba(255, 119, 34, 0.3);
+}
+
+#switchAccountModal .btn-primary:active,
+#switchAccountModal .btn-primary:focus {
+  background-color: var(--orange-dark);
+  border-color: var(--orange-dark);
+  box-shadow: 0 2px 4px rgba(255, 119, 34, 0.3);
+}
+
+#switchAccountModal .btn-secondary {
+  background-color: #E0E0E0;
+  border-color: #E0E0E0;
+  color: var(--text-dark);
+}
+
+/* "Add New Account" button */
+#switchAccountModal #create_other_account {
+  padding: 0.6rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#switchAccountModal #create_other_account:hover {
+  transform: translateY(-2px);
+}
+
+/* Spinner */
+#switchAccountModal .spinner-border.text-primary {
+  color: var(--orange-primary) !important;
+}
+
+/* Empty and Error States */
+#switchAccountModal .text-center.p-4.bg-light {
+  background-color: white !important;
+  border-radius: 8px;
+  border: 1px dashed var(--border-light);
+}
+
+/* Custom active indicator */
+#switchAccountModal .position-absolute.bg-success {
+  background-color: var(--orange-primary) !important;
+}
+
+/* Scrollbar styling */
+#switchAccountModal #manager-details-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+#switchAccountModal #manager-details-container::-webkit-scrollbar-track {
+  background: var(--orange-ultra-light);
+  border-radius: 10px;
+}
+
+#switchAccountModal #manager-details-container::-webkit-scrollbar-thumb {
+  background: var(--orange-light);
+  border-radius: 10px;
+}
+
+#switchAccountModal #manager-details-container::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-hover);
+}

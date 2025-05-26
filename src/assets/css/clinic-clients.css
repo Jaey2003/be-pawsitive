@@ -1,0 +1,329 @@
+/* Clinic Clients - Orange Theme */
+
+:root {
+  --primary-orange: #FF8C00;
+  --secondary-orange: #FFA500;
+  --light-orange: #FFE4B5;
+  --dark-orange: #CC7000;
+  --accent-orange: #FF6F00;
+  --background-light: #FFF9F0;
+}
+
+/* Complete reset of layout */
+body {
+  background-color: #f0f4f8;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Add padding to account for fixed navbar height */
+  padding-top: 70px !important; 
+}
+
+/* Container with strict layout */
+.container {
+  padding: 20px;
+  background-color: #f0f4f8;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1; /* Ensure content appears above any potential issues */
+}
+
+/* Make sure all content in the main container is above the navigation */
+.container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Page title */
+.page-title {
+  color: var(--dark-orange);
+  font-weight: bold;
+  border-left: 5px solid var(--primary-orange);
+  padding-left: 15px;
+  margin: 0;
+}
+
+/* Custom Button with Orange Theme */
+.btn-custom {
+  background-color: var(--primary-orange);
+  color: white;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: var(--dark-orange);
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Filter Card */
+.filter-card {
+  background-color: var(--background-light);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.filter-card .form-control {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.filter-card .form-control:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+.filter-card label {
+  font-weight: 500;
+  color: #555;
+}
+
+/* Search and Filter Styles */
+.search-filter-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.sort-icon {
+  font-size: 0.7rem;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.sort-icon:hover {
+  opacity: 1;
+}
+
+/* Tabs Styling */
+.nav-tabs {
+  border-bottom: 2px solid var(--light-orange);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-tabs .nav-link {
+  color: #777;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: var(--primary-orange);
+  border: none;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  background-color: var(--light-orange);
+  color: var(--dark-orange);
+}
+
+/* Tab content styling - ensure inactive tabs do not occupy space */
+.tab-content > .tab-pane {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
+}
+
+/* Tab pane container - tightly wraps content */
+.tab-pane {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+/* Ensure tab content takes full width */
+.tab-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Table Styling */
+.custom-table-wrapper {
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.table {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.table thead th {
+  background-color: var(--primary-orange);
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 12px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.table tbody td {
+  vertical-align: middle;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:hover {
+  background-color: var(--background-light);
+}
+
+/* Empty state customization */
+.empty-state-container {
+  padding: 40px 0;
+  text-align: center;
+  background-color: white;
+}
+
+.empty-state-icon {
+  color: #dee2e6;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Pagination styling */
+.pagination {
+  margin-bottom: 0;
+}
+
+.pagination .page-link {
+  color: var(--primary-orange);
+  border: 1px solid #dee2e6;
+  padding: 5px 10px;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-orange);
+  border-color: var(--primary-orange);
+  color: white;
+}
+
+/* User and pet info styling */
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-role {
+  font-size: 0.8rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Badge styling */
+.badge {
+  padding: 6px 10px;
+  font-weight: 500;
+  border-radius: 6px;
+  min-width: 70px;
+  text-align: center;
+  display: inline-block;
+}
+
+.badge.bg-success {
+  background-color: #28a745 !important;
+}
+
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.badge.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+/* Notes modal styling */
+.notes-history {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.notes-history .card {
+  border-left: 3px solid var(--primary-orange);
+  margin-bottom: 10px;
+}
+
+/* Modal Styling */
+.modal-header {
+  background-color: var(--primary-orange);
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-content {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Action Buttons */
+.action-buttons .btn-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.action-buttons .btn-icon:hover {
+  background-color: var(--light-orange);
+  color: var(--dark-orange);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px 10px 0 10px;
+  }
+  
+  .table td, .table th {
+    padding: 8px 5px;
+  }
+  
+  .search-filter-container .row {
+    flex-direction: column;
+  }
+  
+  .search-filter-container .col-md-8 .d-flex {
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+    margin-top: 10px;
+  }
+  
+  .action-buttons .btn-icon {
+    width: 28px;
+    height: 28px;
+  }
+}

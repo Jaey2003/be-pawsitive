@@ -1,0 +1,745 @@
+/* Be-Pawsitive Clinic Theme - Professional Orange Theme */
+
+:root {
+  --primary-orange: #FF8C00;
+  --secondary-orange: #FFA500;
+  --orange-light: #FFD580;
+  --orange-dark: #E07000;
+  --orange-accent: #FF6B00;
+  --white: #FFFFFF;
+  --light-gray: #F8F9FA;
+  --medium-gray: #E9ECEF;
+  --dark-gray: #6C757D;
+  --text-dark: #343A40;
+  --success: #28A745;
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.2);
+}
+
+/* =====================
+   GLOBAL STYLES
+   ===================== */
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--light-gray);
+}
+
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* =====================
+   NAVIGATION TABS
+   ===================== */
+.nav-tabs {
+  border-bottom: 1px solid var(--medium-gray);
+}
+
+.nav-tabs .nav-link {
+  color: var(--secondary-orange);
+  border: none;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--white);
+  background-color: var(--secondary-orange);
+  border-radius: 6px 6px 0 0;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  color: var(--orange-dark);
+  background-color: var(--orange-light);
+  opacity: 0.9;
+  border-radius: 6px 6px 0 0;
+}
+
+/* =====================
+   PROFILE COMPONENTS
+   ===================== */
+.profile-card {
+  max-width: 350px;
+  border-radius: 12px;
+  background-color: var(--white);
+  border: 1px solid var(--medium-gray);
+  box-shadow: 0 4px 6px var(--shadow-light);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px var(--shadow-medium);
+}
+
+.profile-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary-orange);
+  padding: 3px;
+  background-color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.info-box {
+  background-color: var(--light-gray);
+  color: var(--text-dark);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border-left: 4px solid var(--secondary-orange);
+}
+
+.status {
+  font-weight: 600;
+  color: var(--secondary-orange);
+  margin-top: 0.75rem;
+}
+
+.view-details {
+  color: var(--orange-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.view-details:hover {
+  color: var(--orange-dark);
+  text-decoration: underline;
+}
+
+/* =====================
+   COVER & PROFILE PHOTO
+   ===================== */
+.cover-photo {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, var(--orange-light), var(--secondary-orange));
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  margin-bottom: 3rem !important;
+}
+
+.cover-photo-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--orange-light), var(--secondary-orange));
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.cover-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+}
+
+.profile-photo {
+  position: absolute;
+  bottom: -50px;
+  left: 2rem;
+  width: 140px;
+  height: 140px;
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--white);
+  box-shadow: 0 4px 10px var(--shadow-medium);
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.profile-photo:hover {
+  box-shadow: 0 6px 15px var(--shadow-dark);
+  transform: translateY(-5px);
+}
+
+.profile-photo img.clinicLogo {
+  background-color: var(--white);
+  display: block !important;
+}
+
+.profile-photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.profile-photo-hover .profile-photo-overlay,
+.profile-photo:hover .profile-photo-overlay {
+  opacity: 1;
+}
+
+.profile-info {
+  margin-top: 70px;
+}
+
+/* Friend icons with overlap effect */
+.friend-icons img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: -8px;
+  border: 2px solid var(--white);
+  box-shadow: 0 2px 4px var(--shadow-light);
+  transition: transform 0.2s ease;
+}
+
+.friend-icons img:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+/* Clinic Info Items */
+.clinic-info-item {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.clinic-info-item:last-child {
+  border-bottom: none;
+}
+
+/* Photo thumbnails */
+.photo-thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px var(--shadow-light);
+  transition: transform 0.2s ease;
+}
+
+.photo-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.photo-thumbnail img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* Posts wrapper */
+.posts-wrapper {
+  min-height: 200px;
+}
+
+/* =====================
+   BUTTONS & INPUTS
+   ===================== */
+.btn-custom {
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  border-radius: 6px;
+  background-color: var(--secondary-orange);
+  color: var(--white);
+  border: none;
+  box-shadow: 0 2px 4px var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: var(--orange-dark);
+  box-shadow: 0 4px 8px var(--shadow-medium);
+  transform: translateY(-1px);
+  color: var(--white);
+}
+
+.btn-custom:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px var(--shadow-light);
+}
+
+.no-text-cursor {
+  cursor: pointer;
+  caret-color: transparent;
+  border-radius: 20px;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--light-gray);
+  border: 1px solid var(--medium-gray);
+  transition: all 0.2s ease;
+}
+
+.no-text-cursor:hover {
+  background-color: var(--medium-gray);
+}
+
+/* =====================
+   CARDS & CONTENT AREAS
+   ===================== */
+.card {
+  border-radius: 10px;
+  border: 1px solid var(--medium-gray);
+  box-shadow: 0 2px 5px var(--shadow-light);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px var(--shadow-medium);
+}
+
+.card-title {
+  color: var(--orange-dark);
+  font-weight: 600;
+}
+
+.image-box {
+  width: 200px;
+  height: 200px;
+  border: 3px solid var(--secondary-orange);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.05);
+}
+
+/* =====================
+   TOAST NOTIFICATIONS
+   ===================== */
+#toast-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  max-width: 90%;
+}
+
+.toast {
+  position: relative;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 8px 16px var(--shadow-dark);
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInDown 0.4s ease forwards;
+}
+
+.toast-orange {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: var(--white);
+}
+
+.toast-orange .toast-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.toast-orange::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--white);
+  border-radius: 8px 0 0 8px;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button without dropdown caret */
+.btn-no-caret.dropdown-toggle::after {
+  display: none !important;
+}
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  background-color: var(--light-gray);
+  border: 1px solid var(--medium-gray);
+  border-radius: 10px;
+}
+
+.stat-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px var(--shadow-light);
+}
+
+.stat-card h3 {
+  font-weight: 700;
+}
+
+/* Service Cards */
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid var(--medium-gray);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px var(--shadow-light);
+  border-color: var(--orange-light);
+}
+
+/* Photo Gallery */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-controls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-controls {
+  opacity: 1;
+}
+
+/* Review Styles */
+.reviews-list .card {
+  transition: transform 0.2s ease;
+}
+
+.reviews-list .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+.rating-stars {
+  letter-spacing: -2px;
+}
+
+/* Admin Controls */
+.admin-controls {
+  margin-bottom: 0.5rem;
+}
+
+.action-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Team Member List */
+.list-group-item {
+  transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: var(--light-gray);
+}
+
+.image-preview-wrapper {
+  background-color: var(--light-gray);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-preview-grid {
+  display: grid;
+  gap: 4px;
+  max-height: 300px;
+}
+
+.image-preview-grid.single-image {
+  grid-template-columns: 1fr;
+}
+
+.image-preview-grid.two-images {
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-preview-grid.three-images {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image-preview-grid.multi-images {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.preview-item {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.remove-image-btn {
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.remove-image-btn:hover {
+  opacity: 1;
+}
+
+/* Post Images Styling */
+.post-image-container {
+  margin: 15px 0;
+  text-align: center;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.post-image-wrapper {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.post-single-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 400px;
+}
+
+.post-carousel {
+  margin: 15px 0;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-image-wrapper {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--light-gray);
+}
+
+.post-carousel-image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.post-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px var(--shadow-light);
+  margin-bottom: 20px;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 5px 15px var(--shadow-medium);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.post-content {
+  margin: 15px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.post-footer {
+  display: flex;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--light-gray);
+}
+
+.post-date {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
+.btn-like.liked {
+  color: #e74c3c;
+}
+
+.comment-form {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--light-gray);
+}
+
+/* Post Image Grid Styles */
+.post-image-grid {
+    display: grid;
+    grid-gap: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+    height: 400px;
+}
+
+/* 2 images grid */
+.grid-2-images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+/* 3 images grid */
+.grid-3-images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-3-images .grid-image-item:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+/* 4 images grid (Facebook style) */
+.grid-4-images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+/* Multi-images grid (more than 4) */
+.grid-multi-images {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.grid-image-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.grid-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-image-item.has-overlay {
+    position: relative;
+}
+
+.image-count-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Single Image Style */
+.post-image-container {
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-single-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

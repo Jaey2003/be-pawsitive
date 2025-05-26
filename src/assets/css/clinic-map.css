@@ -1,0 +1,148 @@
+/* Clinic Map Styles */
+
+/* Map container */
+.vet-map-container {
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Location confirmed visual feedback */
+.vet-map-container.location-confirmed {
+    border: 2px solid #28a745 !important;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.3) !important;
+}
+
+/* Map wrapper */
+#vet_mapWrapper {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Leaflet map container */
+#vet_leafletMap {
+    border-radius: 8px;
+    z-index: 1;
+}
+
+/* Search input and button */
+#vet_mapSearchInput {
+    border-color: #ffc107;
+    border-right: none;
+}
+
+#vet_mapSearchBtn {
+    border-color: #ffc107;
+}
+
+/* Coordinate display */
+#vet_displayCoords {
+    background-color: #f8f9fa;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+/* Map controls card */
+.map-controls-card {
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Map search results */
+.map-search-results {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* Map legend */
+.map-legend {
+    font-size: 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.map-legend small {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.map-legend i {
+    margin-right: 5px;
+    color: #ffc107;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #vet_mapWrapper {
+        height: 300px !important;
+    }
+    
+    .map-legend {
+        flex-direction: column;
+    }
+    
+    .map-legend small {
+        margin-bottom: 5px;
+    }
+}
+
+/* Tooltip styling */
+.leaflet-tooltip {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+}
+
+/* Custom marker styling */
+.leaflet-marker-icon {
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+/* Pulsing animation for marker when newly placed */
+@keyframes markerPulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.leaflet-marker-icon.new-marker {
+    animation: markerPulse 0.8s ease-in-out;
+}
+
+/* Confirmation modal styling */
+#locationConfirmModal .modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#confirmCoordinates {
+    color: #212529;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.coordinate-value {
+    font-weight: 600;
+    color: #28a745;
+}
+
+#confirmAddress {
+    line-height: 1.5;
+} 

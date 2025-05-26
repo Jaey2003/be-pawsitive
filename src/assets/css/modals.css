@@ -1,0 +1,9 @@
+.modal-backdrop {
+    z-index: 1040 !important; /* Default backdrop z-index */
+}
+.modal {
+    z-index: 1050 !important; /* Default modal z-index */
+}
+#responseModal {
+    z-index: 1060 !important; /* Ensure response modal is above others */
+}

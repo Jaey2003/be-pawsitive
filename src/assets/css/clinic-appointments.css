@@ -1,0 +1,1502 @@
+/* Clinic Appointments - Orange Theme */
+
+:root {
+  --primary-orange: #FF8C00;
+  --secondary-orange: #FFA500;
+  --light-orange: #FFE4B5;
+  --dark-orange: #CC7000;
+  --accent-orange: #FF6F00;
+  --background-light: #FFF9F0;
+}
+
+.page-title {
+  color: var(--dark-orange);
+  font-weight: bold;
+  border-left: 5px solid var(--primary-orange);
+  padding-left: 15px;
+}
+
+/* Custom Button with Orange Theme */
+.btn-custom {
+  background-color: var(--primary-orange);
+  color: white;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: var(--dark-orange);
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Filter Card */
+.filter-card {
+  background-color: var(--background-light);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.filter-card .form-control {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.filter-card .form-control:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+.filter-card label {
+  font-weight: 500;
+  color: #555;
+}
+
+/* Tabs Styling */
+.nav-tabs {
+  border-bottom: 2px solid var(--light-orange);
+}
+
+.nav-tabs .nav-link {
+  color: #777;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+  color: white;
+  background-color: var(--primary-orange);
+  border: none;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  background-color: var(--light-orange);
+  color: var(--dark-orange);
+}
+
+/* Table Styling */
+.custom-table-wrapper {
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: var(--primary-orange);
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 12px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table tbody td {
+  vertical-align: middle;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.table tbody tr:hover {
+  background-color: var(--background-light);
+}
+
+/* Status Badges */
+.badge {
+  padding: 6px 10px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.bg-scheduled {
+  background-color: #6c757d;
+}
+
+.bg-confirmed {
+  background-color: #28a745;
+}
+
+.bg-completed {
+  background-color: var(--primary-orange);
+}
+
+.bg-cancelled {
+  background-color: #dc3545;
+}
+
+/* Action Buttons */
+.action-buttons .btn-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.action-buttons .btn-icon:hover {
+  background-color: var(--light-orange);
+  color: var(--dark-orange);
+}
+
+/* Pet Avatars */
+.pet-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--light-orange);
+  display: inline-block;
+}
+
+/* Calendar View */
+.appointment-calendar {
+  min-height: 400px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-placeholder-icon {
+  font-size: 3rem;
+  color: var(--light-orange);
+  margin-bottom: 15px;
+}
+
+/* Modal Styling */
+.modal-header {
+  background-color: var(--primary-orange);
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-content {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Calendar Styles */
+.calendar-grid {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+/* Add CSS for calendar days header and days grid layout */
+.calendar-days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: var(--background-light);
+  border-bottom: 2px solid var(--light-orange);
+  text-align: center;
+}
+
+.calendar-days-header div {
+  padding: 15px 10px;
+  font-weight: 600;
+  color: var(--dark-orange);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0;
+  background-color: white;
+}
+
+.calendar-days .day, 
+.calendar-days .empty {
+  min-height: 100px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.calendar-days .empty {
+  background-color: #f9f9f9;
+}
+
+.calendar-days .day:hover {
+  background-color: rgba(255, 140, 0, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+}
+
+.calendar-days .day.has-appointments {
+  cursor: pointer;
+  background-color: rgba(255, 240, 220, 0.3);
+  border-left: 3px solid var(--primary-orange);
+}
+
+.calendar-days .day.has-unavailable {
+  cursor: pointer;
+  position: relative;
+}
+
+.calendar-days .day.has-unavailable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 15px 15px 0;
+  border-color: transparent #ff6b6b transparent transparent;
+  z-index: 1;
+}
+
+.calendar-days .day.has-unavailable.has-appointments {
+  background-color: rgba(255, 235, 210, 0.4);
+  border-left: 3px solid var(--primary-orange);
+}
+
+.calendar-days .day.has-unavailable .unavailable-indicator {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  color: #dc3545;
+  font-size: 10px;
+  z-index: 2;
+}
+
+.calendar-days .day.has-appointments:hover {
+  background-color: rgba(255, 240, 220, 0.5);
+}
+
+.calendar-days .day .day-number {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #444;
+  position: relative;
+  z-index: 1;
+}
+
+.calendar-days .day .appointment-indicator {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.calendar-days .day .appointment-indicator .badge {
+  background-color: var(--primary-orange);
+  color: white;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  box-shadow: 0 2px 4px rgba(255, 140, 0, 0.2);
+}
+
+/* Calendar Header */
+.calendar-header {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header h4 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header .btn {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.calendar-header .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header .prev-month,
+.calendar-header .next-month {
+  padding: 0;
+}
+
+.calendar-header .calendar-month-title {
+  font-size: 1.5rem;
+}
+
+/* Current day highlight */
+.calendar-days .day.current-day {
+  background-color: rgba(255, 140, 0, 0.08);
+  border: 1px solid var(--light-orange);
+}
+
+.calendar-days .day.current-day .day-number:after {
+  content: "•";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  color: var(--primary-orange);
+  font-size: 1.2rem;
+}
+
+/* Weekend days */
+.calendar-days .day:nth-child(7n),
+.calendar-days .day:nth-child(7n-6) {
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .calendar-days .day, 
+  .calendar-days .empty {
+    min-height: 80px;
+    padding: 8px;
+  }
+  
+  .calendar-days-header div {
+    padding: 10px 5px;
+    font-size: 0.8rem;
+  }
+  
+  .calendar-days .day .day-number {
+    font-size: 1rem;
+  }
+  
+  .calendar-header {
+    padding: 15px;
+  }
+  
+  .calendar-header h4 {
+    font-size: 1.2rem;
+  }
+  
+  .calendar-header .btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Existing calendar-day styles should be kept */
+.calendar-day {
+  min-height: 120px;
+  border: 1px solid #e0e0e0;
+  padding: 8px;
+  position: relative;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+.calendar-day:hover {
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.calendar-day.empty {
+  background-color: #f8f9fa;
+}
+
+.calendar-day.current-day {
+  background-color: #f0f8ff;
+}
+
+.calendar-day.unavailable {
+  background-color: #fff0f0;
+  cursor: not-allowed;
+  position: relative;
+  opacity: 0.8;
+}
+
+.calendar-day.unavailable::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(220, 53, 69, 0.1),
+    rgba(220, 53, 69, 0.1) 10px,
+    rgba(255, 255, 255, 0.2) 10px,
+    rgba(255, 255, 255, 0.2) 20px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.day-number {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.unavailable-indicator {
+  font-size: 11px;
+  color: #fff;
+  background-color: #dc3545;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  display: inline-block;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+}
+
+.appointment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calendar-appointment {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar-appointment:hover {
+  transform: translateX(2px);
+  background-color: #e9ecef;
+}
+
+.appointment-time {
+  font-weight: bold;
+  margin-right: 5px;
+  font-size: 10px;
+}
+
+.appointment-client {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.appointment-status {
+  width: 8px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.more-appointments {
+  font-size: 10px;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 2px;
+}
+
+/* Status colors */
+.bg-confirmed {
+  background-color: #28a745;
+}
+
+.bg-scheduled {
+  background-color: #007bff;
+}
+
+.bg-completed {
+  background-color: var(--primary-orange);
+}
+
+.bg-cancelled {
+  background-color: #dc3545;
+}
+
+/* Calendar Header */
+.calendar-header {
+  background-color: var(--primary-orange);
+  color: white;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.calendar-header h4 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.calendar-header .btn {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.calendar-header .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row .col-md-3 {
+    margin-bottom: 15px;
+  }
+  
+  .action-buttons .btn-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .calendar-day {
+    height: 60px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Appointment Details Modal Styling */
+#appointmentDetailsModal .modal-header {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+  padding: 15px 20px;
+}
+
+#appointmentDetailsModal .modal-header .btn-close-white {
+  filter: brightness(0) invert(1);
+}
+
+#appointmentDetailsModal .appointment-banner {
+  background-color: var(--background-light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#appointmentDetailsModal .date-badge,
+#appointmentDetailsModal .time-badge {
+  font-size: 0.9rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#appointmentDetailsModal .client-avatar,
+#appointmentDetailsModal .pet-avatar {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#appointmentDetailsModal .client-avatar:hover,
+#appointmentDetailsModal .pet-avatar:hover {
+  transform: scale(1.05);
+}
+
+#appointmentDetailsModal .section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#appointmentDetailsModal .detail-label {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+#appointmentDetailsModal .detail-value {
+  font-size: 1rem;
+}
+
+#appointmentDetailsModal .notes-text {
+  font-size: 0.9rem;
+  color: #555;
+  background-color: rgba(255, 140, 0, 0.05);
+  border: 1px solid var(--light-orange) !important;
+  border-radius: 6px;
+  padding: 10px 12px !important;
+}
+
+#appointmentDetailsModal .badge {
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+#appointmentDetailsModal .badge i {
+  font-size: 0.9rem;
+}
+
+#appointmentDetailsModal .modal-footer {
+  border-top: 1px solid #eee;
+  padding: 15px 20px;
+}
+
+#appointmentDetailsModal .btn-custom {
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+#appointmentDetailsModal .btn-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+}
+
+#appointmentDetailsModal .btn-danger {
+  background-color: #dc3545;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#appointmentDetailsModal .btn-danger:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+#appointmentDetailsModal .btn-outline-secondary {
+  transition: all 0.3s ease;
+}
+
+#appointmentDetailsModal .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles for appointment modal */
+@media (max-width: 576px) {
+  #appointmentDetailsModal .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  #appointmentDetailsModal .date-badge,
+  #appointmentDetailsModal .time-badge {
+    font-size: 0.8rem;
+    padding: 4px 8px !important;
+  }
+  
+  #appointmentDetailsModal .client-avatar,
+  #appointmentDetailsModal .pet-avatar {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+/* Edit Appointment Modal Styling */
+#appointmentEditModal .modal-header {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+  padding: 15px 20px;
+}
+
+#appointmentEditModal .modal-header .btn-close-white {
+  filter: brightness(0) invert(1);
+}
+
+#appointmentEditModal .form-control:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.15);
+}
+
+#appointmentEditModal .form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+#appointmentEditModal .client-avatar,
+#appointmentEditModal .pet-avatar {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#appointmentEditModal select.form-control option:checked {
+  background-color: var(--primary-orange);
+  color: white;
+}
+
+#appointmentEditModal .btn-custom {
+  background-color: var(--primary-orange);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#appointmentEditModal .btn-custom:hover {
+  background-color: var(--dark-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+}
+
+#appointmentEditModal .modal-footer {
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  padding: 15px 20px;
+}
+
+/* Highlight the edit icon when clicked */
+.action-buttons .btn-icon[title="Edit"]:active {
+  background-color: var(--primary-orange);
+  color: white;
+  transform: scale(0.95);
+}
+
+/* Responsive styles for edit modal */
+@media (max-width: 576px) {
+  #appointmentEditModal .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  #appointmentEditModal .modal-body {
+    padding: 1rem;
+  }
+  
+  #appointmentEditModal .row {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  #appointmentEditModal .col-md-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/* Alternative Time Suggestion Modal Styling */
+#suggestAlternativeModal .modal-header {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+  padding: 15px 20px;
+}
+
+#suggestAlternativeModal .modal-header .btn-close-white {
+  filter: brightness(0) invert(1);
+}
+
+#suggestAlternativeModal .form-control:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.15);
+}
+
+#suggestAlternativeModal .form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+#suggestAlternativeModal .suggestion-title {
+  color: var(--dark-orange);
+  border-bottom: 2px solid var(--light-orange);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+#suggestAlternativeModal .form-check-input:checked {
+  background-color: var(--primary-orange);
+  border-color: var(--primary-orange);
+}
+
+#suggestAlternativeModal .alternative-option {
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+#suggestAlternativeModal .alternative-option:hover {
+  background-color: rgba(255, 140, 0, 0.05);
+  border-color: var(--light-orange) !important;
+}
+
+#suggestAlternativeModal .alternative-option input:checked ~ label {
+  color: var(--dark-orange);
+}
+
+#suggestAlternativeModal .btn-custom {
+  background-color: var(--primary-orange);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#suggestAlternativeModal .btn-custom:hover {
+  background-color: var(--dark-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+}
+
+/* Confirmation Modal */
+#suggestionConfirmationModal .suggestion-details {
+  background-color: var(--background-light);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 140, 0, 0.2);
+}
+
+#suggestionConfirmationModal .btn-success {
+  background-color: #28a745;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#suggestionConfirmationModal .btn-success:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive styles for suggestion modals */
+@media (max-width: 576px) {
+  #suggestAlternativeModal .modal-dialog,
+  #suggestionConfirmationModal .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  #suggestAlternativeModal .modal-body,
+  #suggestionConfirmationModal .modal-body {
+    padding: 1rem;
+  }
+  
+  #suggestAlternativeModal .current-appointment {
+    flex-direction: column;
+  }
+  
+  #suggestAlternativeModal .alternative-option label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Unavailable Times Styling */
+#unavailableTimesModal .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#unavailableTimesModal .card-body {
+  background-color: var(--background-light);
+}
+
+#unavailableTimesModal .form-control:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.15);
+}
+
+#unavailableTimesModal .form-check-input:checked {
+  background-color: var(--primary-orange);
+  border-color: var(--primary-orange);
+}
+
+#unavailableTimesModal .table thead th {
+  background-color: var(--primary-orange);
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 12px 15px;
+}
+
+#unavailableTimesModal .placeholder-row td {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Enhanced Unavailable Times Styling */
+.time-quick-select .btn {
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  transition: all 0.2s ease;
+}
+
+.time-quick-select .btn:hover {
+  background-color: var(--light-orange);
+  border-color: var(--primary-orange);
+  color: var(--dark-orange);
+}
+
+.time-quick-select .btn:active {
+  background-color: var(--primary-orange);
+  color: white;
+}
+
+#timeSelectSection {
+  transition: opacity 0.3s ease;
+}
+
+/* Multiple days selection styling */
+#multipleDaysSection {
+  background-color: rgba(255, 245, 230, 0.5);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid var(--light-orange);
+  transition: all 0.3s ease;
+}
+
+#multipleDaysSection .alert-info {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-left: 3px solid var(--primary-orange);
+  padding: 8px 12px;
+}
+
+#multipleDaysSection .form-check-input:checked {
+  background-color: var(--primary-orange);
+  border-color: var(--primary-orange);
+}
+
+#multipleDaysSection .day-checkbox:checked + label {
+  color: var(--dark-orange);
+  font-weight: 500;
+}
+
+#multipleDaysPreview {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+#multipleDaysPreview .text-danger {
+  font-weight: 500;
+}
+
+.preview-section {
+  transition: all 0.3s ease;
+  border-color: #ddd !important;
+}
+
+.preview-section:hover {
+  border-color: var(--light-orange) !important;
+  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.1);
+}
+
+#unavailableTimePreview {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#unavailableTimePreview .badge {
+  font-weight: 400;
+}
+
+/* Tooltip for more clarity */
+[data-bs-toggle="tooltip"] {
+  cursor: help;
+}
+
+/* Alert info in recurring section */
+#recurringOptions .alert-info {
+  background-color: rgba(255, 245, 230, 0.5);
+  border-color: var(--light-orange);
+  color: var(--dark-orange);
+}
+
+/* Recurring events indicator */
+.recurring-badge {
+  background-color: #6c757d;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  display: inline-block;
+}
+
+/* Manage Unavailable Times button */
+#manageUnavailableTimes {
+  border: 1px solid var(--primary-orange);
+  color: var(--dark-orange);
+  transition: all 0.3s ease;
+}
+
+#manageUnavailableTimes:hover {
+  background-color: var(--light-orange);
+  color: var(--dark-orange);
+}
+
+/* Action buttons for unavailable times */
+.unavailable-actions .btn-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.unavailable-actions .btn-icon:hover {
+  background-color: var(--light-orange);
+  color: var(--dark-orange);
+}
+
+.unavailable-actions .btn-icon.delete-time:hover {
+  background-color: #ffcccb;
+  color: #dc3545;
+}
+
+/* Analytics and Reports Styling */
+#appointmentAnalyticsModal .modal-dialog {
+  max-width: 90%;
+  max-height: 90vh;
+  margin: 2.5vh auto;
+  overflow-x: hidden;
+}
+
+#appointmentAnalyticsModal .modal-content {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+#appointmentAnalyticsModal .modal-body {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.5rem;
+}
+
+#appointmentAnalyticsModal .modal-header,
+#appointmentAnalyticsModal .modal-footer {
+  flex-shrink: 0;
+}
+
+#appointmentAnalyticsModal .modal-header {
+  background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+  color: white;
+}
+
+#appointmentAnalyticsModal .card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+#appointmentAnalyticsModal .card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+#appointmentAnalyticsModal .card-header {
+  background-color: var(--background-light);
+  border-bottom: 2px solid rgba(255, 140, 0, 0.1);
+  padding: 12px 15px;
+  font-weight: 600;
+}
+
+#appointmentAnalyticsModal .table th {
+  background-color: var(--primary-orange);
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+
+#appointmentAnalyticsModal .table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+#appointmentAnalyticsModal .btn-outline-primary {
+  color: #007bff;
+  border-color: #007bff;
+}
+
+#appointmentAnalyticsModal .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+#appointmentAnalyticsModal .btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+#appointmentAnalyticsModal .btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+#appointmentAnalyticsModal .text-primary {
+  color: #007bff !important;
+}
+
+#appointmentAnalyticsModal .text-danger {
+  color: #dc3545 !important;
+}
+
+#appointmentAnalyticsModal .text-success {
+  color: #28a745 !important;
+}
+
+#appointmentAnalyticsModal .text-secondary {
+  color: #6c757d !important;
+}
+
+#appointmentAnalyticsModal .form-control:focus {
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+/* Analytics Cards */
+#appointmentAnalyticsModal .card h2 {
+  font-size: 2.5rem;
+}
+
+#appointmentAnalyticsModal .card h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Print Styles for Reports */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  #appointmentAnalyticsModal,
+  #appointmentAnalyticsModal * {
+    visibility: visible;
+  }
+  
+  #appointmentAnalyticsModal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  #appointmentAnalyticsModal .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  #appointmentAnalyticsModal .modal-footer,
+  #appointmentAnalyticsModal #printReport,
+  #appointmentAnalyticsModal #exportPDF,
+  #appointmentAnalyticsModal #exportExcel {
+    display: none !important;
+  }
+}
+
+/* Scrollbar styling for the analytics modal */
+#appointmentAnalyticsModal .modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+#appointmentAnalyticsModal .modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+#appointmentAnalyticsModal .modal-body::-webkit-scrollbar-thumb {
+  background: var(--light-orange);
+  border-radius: 4px;
+}
+
+#appointmentAnalyticsModal .modal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-orange);
+}
+
+/* Card container with scroll snapping for better mobile experience */
+#appointmentAnalyticsModal .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#appointmentAnalyticsModal .col-md-3,
+#appointmentAnalyticsModal .col-md-6,
+#appointmentAnalyticsModal .col-md-12 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Fix chart container height to prevent layout shifts */
+#appointmentAnalyticsModal .card-body canvas {
+  min-height: 250px;
+  max-width: 100%;
+}
+
+/* Fix horizontal scrolling in tables */
+#appointmentAnalyticsModal .table-responsive {
+  max-height: 350px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 20;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Fix column padding to avoid overflow */
+#appointmentAnalyticsModal .filter-section .row [class*="col-"] {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Responsive adjustments for analytics */
+@media (max-width: 768px) {
+  #appointmentAnalyticsModal .modal-dialog {
+    max-width: 95%;
+    margin: 1vh auto;
+    max-height: 98vh;
+  }
+  
+  #appointmentAnalyticsModal .modal-content {
+    height: 98vh;
+  }
+  
+  #appointmentAnalyticsModal .card h2 {
+    font-size: 1.8rem;
+  }
+  
+  #appointmentAnalyticsModal .modal-body {
+    padding: 1rem;
+  }
+  
+  #appointmentAnalyticsModal .card-header {
+    padding: 10px;
+  }
+  
+  #appointmentAnalyticsModal .card-body {
+    padding: 0.75rem;
+  }
+}
+
+/* Section headers in analytics modal */
+#appointmentAnalyticsModal .section-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-orange);
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--light-orange);
+  margin-top: 20px;
+  margin-bottom: 16px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  padding-top: 15px;
+  display: block;
+  width: 100%;
+  clear: both;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+  margin-right: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+}
+
+/* Ensure the sticky headers don't show content underneath */
+#appointmentAnalyticsModal .section-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  width: 100%; /* Changed from 110% to prevent overflow */
+}
+
+/* Section separator for creating space between sticky header and content */
+#appointmentAnalyticsModal .section-separator {
+  height: 20px;
+  visibility: hidden;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 10px;
+}
+
+/* Add proper spacing after status legend and before section header */
+#appointmentAnalyticsModal .status-legend {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #eee;
+  margin-top: 5px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Ensure content after sticky headers has proper spacing */
+#appointmentAnalyticsModal .section-header + .row {
+  padding-top: 20px;
+  position: relative;
+  z-index: 20;
+  margin-top: 5px;
+}
+
+/* Responsive table container with proper height and scrolling */
+#appointmentAnalyticsModal .table-responsive {
+  max-height: 350px;
+  overflow-y: auto;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 20;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#appointmentAnalyticsModal .table-responsive::-webkit-scrollbar {
+  width: 10px;
+}
+
+#appointmentAnalyticsModal .table-responsive::-webkit-scrollbar-track {
+  background: #f8f8f8;
+  border-radius: 4px;
+}
+
+#appointmentAnalyticsModal .table-responsive::-webkit-scrollbar-thumb {
+  background: var(--light-orange);
+  border-radius: 4px;
+}
+
+#appointmentAnalyticsModal .table-responsive::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-orange);
+}
+
+/* Fix filter section spacing to avoid overlap with sticky headers */
+#appointmentAnalyticsModal .filter-section {
+  margin-bottom: 40px;
+  padding-top: 5px;
+  position: relative;
+  z-index: 20;
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Status legend for analytics */
+#appointmentAnalyticsModal .legend-item {
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+#appointmentAnalyticsModal .legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Fix layout issues with charts */
+#appointmentAnalyticsModal .card {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* Fix issue with completed color in legend */
+#appointmentAnalyticsModal .legend-item .legend-color[style*="primary-orange"] {
+  margin-right: 5px;
+}
+
+/* Make tables responsive without horizontal overflow */
+#appointmentAnalyticsModal table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+#appointmentAnalyticsModal table th,
+#appointmentAnalyticsModal table td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Fix chart size to prevent overflow */
+#appointmentAnalyticsModal canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Enforce width constraint for all elements */
+#appointmentAnalyticsModal * {
+  max-width: 100%;
+}
+
+/* Alternative Suggestions Styling */
+.client-status-select {
+    min-width: 120px;
+    border-color: #e0e0e0;
+    font-size: 0.875rem;
+}
+
+.client-status-select:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.15);
+}
+
+.client-feedback {
+    font-size: 0.875rem;
+    resize: vertical;
+    min-height: 60px;
+    border-color: #e0e0e0;
+}
+
+.client-feedback:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.15);
+}
+
+/* Status badge colors */
+.badge.bg-pending {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.badge.bg-accepted {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.badge.bg-declined {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Responsive adjustments for alternative suggestions */
+@media (max-width: 768px) {
+    .client-status-select {
+        min-width: 100px;
+    }
+    
+    .client-feedback {
+        min-height: 50px;
+    }
+}

@@ -1,0 +1,344 @@
+/* Veterinary SOAP Notes Styling */
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.card-header {
+    font-weight: 500;
+    border-bottom: 0;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
+
+/* Visual feedback for saving the Subjective notes */
+.saving-in-progress {
+    border-color: #ffc107 !important;
+    background-color: rgba(255, 248, 227, 0.2) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important;
+}
+
+.saved-success {
+    border-color: #28a745 !important;
+    transition: all 0.5s ease-out;
+    animation: saved-pulse 2s ease-out;
+}
+
+.save-error {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.saved-timestamp {
+    font-style: italic;
+    opacity: 0;
+    animation: fade-in 0.5s ease-out forwards;
+}
+
+/* Subjective read-only mode styling */
+.subjective-readonly {
+    background-color: #f8f9fa !important;
+    border-left: 3px solid #28a745 !important;
+    transition: all 0.3s ease;
+}
+
+.subjective-readonly:hover {
+    background-color: #f0f0f0 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.subjective-content {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.subjective-content p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+#editSubjective {
+    transition: all 0.2s ease;
+    border-width: 1px;
+    font-weight: 500;
+}
+
+#editSubjective:hover {
+    transform: scale(1.05);
+    background-color: #0d6efd;
+    color: white;
+}
+
+#saveSubjective {
+    transition: all 0.3s ease;
+}
+
+/* Transition for hiding/showing save button */
+#subjectiveNotes + .d-flex {
+    transition: all 0.3s ease;
+}
+
+/* Style for read-only badge */
+.subjective-readonly .badge.bg-success {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.7rem;
+}
+
+@keyframes saved-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 0 0.5rem rgba(40, 167, 69, 0);
+    }
+    100% {
+        box-shadow: none;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SOAP Section Styling */
+.card .card-header.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+.card .card-header.bg-primary {
+    background-color: #0d6efd !important;
+}
+
+/* Button Styling */
+.btn-lg {
+    padding: 0.75rem 1.5rem;
+}
+
+/* Room Cards Styling */
+.room-card {
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.room-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.active-room {
+    border: 2px solid #007bff;
+    background-color: #f8f9fa;
+}
+
+.room-card .card-body {
+    padding: 1rem;
+}
+
+.room-card .card-footer {
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+}
+
+.room-card .badge {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.5rem;
+}
+
+#activeRooms {
+    min-height: 100px;
+}
+
+/* Close Room Button */
+#closeRoomBtn {
+    margin-left: 1rem;
+    transition: all 0.2s ease;
+}
+
+#closeRoomBtn:hover {
+    background-color: #6c757d;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Client Search Modal Styling */
+#clientSearchResults {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.select-patient {
+    transition: all 0.2s ease;
+}
+
+.select-patient:hover {
+    transform: scale(1.05);
+}
+
+/* Styled Divider */
+.modal-body h6 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+.modal-body h6:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background-color: #28a745;
+}
+
+/* SOAP History Styling */
+.soap-record {
+    border-bottom: 1px solid #dee2e6;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.soap-record:last-child {
+    border-bottom: none;
+}
+
+.soap-section {
+    border-left: 4px solid #6c757d;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.soap-section h6 {
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Form Validation Styling */
+.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    display: block;
+    color: #dc3545;
+}
+
+/* History Button */
+.position-fixed.bottom-0.end-0 button {
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .row {
+        margin-right: -0.5rem;
+        margin-left: -0.5rem;
+    }
+    
+    .col-md-3, .col-md-4, .col-md-6 {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+    
+    .room-card {
+        width: 100% !important;
+    }
+    
+    #clientSearchResults {
+        max-height: 250px;
+    }
+}
+
+/* Loading indicators */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Override Bootstrap styles for active tabs */
+.nav-link.active {
+    background-color: #f8f9fa !important;
+    border-bottom-color: transparent !important;
+    font-weight: bold;
+}
+
+/* Add transition effects to alerts */
+.alert {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.alert.fade {
+    opacity: 0;
+}
+
+.alert.show {
+    opacity: 1;
+}
+
+/* Animated transition for SOAP container */
+#soapContainer {
+    margin-top: 2rem;
+    border-top: 3px solid #f0f0f0;
+    padding-top: 1.5rem;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Animation for when the SOAP container becomes visible */
+#soapContainer[style*="display: block"] {
+    animation: fadeInDown 0.4s ease-in-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#currentRoomTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+} 

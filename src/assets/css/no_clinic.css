@@ -1,0 +1,42 @@
+/* No Clinic Page - Orange Theme 
+ * Styles for the empty state when no clinics are available
+ */
+
+/* Ensure we have the custom variables for the orange theme */
+:root {
+    --primary-orange: #FF8C00;
+    --secondary-orange: #FFA500;
+    --light-orange: #FFE4B5;
+    --dark-orange: #CC7000;
+    --accent-orange: #FF6F00;
+    --background-light: #FFF9F0;
+}
+
+/* Custom Button with Orange Theme */
+.btn-custom {
+    background-color: var(--primary-orange);
+    color: white;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: var(--dark-orange);
+    box-shadow: 0 4px 8px rgba(255, 140, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Card style */
+.card {
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Subtle background */
+body {
+    background-color: var(--background-light, #FFF9F0);
+}
